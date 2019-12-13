@@ -1,4 +1,5 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
@@ -9,6 +10,7 @@ import { ProtectedModule } from '../protected/protected.module';
   declarations: [],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     PublicModule,
     ProtectedModule
   ]
