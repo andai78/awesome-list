@@ -1,2 +1,6 @@
-<al-planning-workday-item *ngFor="let workday of workdays$ | async" [workday]="workday">
+<al-planning-workday-item 
+  *ngFor="let workday of workdays$ | async" 
+  [dueDate]="workday.dueDate"    
+  [doneTasks]="workday.doneTasks" 
+  [remainingTasks]="workday.remainingTasks" (removeWorkDay)="onRemoveWorkDay($event)">
 </al-planning-workday-item>
