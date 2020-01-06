@@ -1,0 +1,51 @@
+<form
+ novalidate
+ [formGroup]="registerForm"
+ (ngSubmit)="submit()" 
+ class="card-body"
+>
+  
+ <div class="form-group">
+  <label for="name">Name</label>
+  <input
+   id="name"
+   type="name"
+   formControlName="name"
+   class="form-control"
+   placeholder="Votre peusdonyme"
+   autocorrect="off"
+   autocomplete="off"
+  />
+</div>
+  
+ <!-- A ajouter : le champ de l’adresse email. -->
+ <div class="form-group">
+  <label for="email">Email</label>
+  <input
+   id="email"
+   type="email"
+   formControlName="email"
+   class="form-control"
+   placeholder="Votre email"
+   autocorrect="off"
+   autocomplete="off"
+  />
+ </div>
+ <!-- A ajouter : le champ du mot de passe. -->
+ <div class="form-group">
+  <label for="password">Password</label>
+  <input
+   id="password"
+   type="password"
+   formControlName="password"
+   class="form-control"
+   placeholder="Votre mot de passe"
+  /> 
+  </div>
+ <!-- A ajouter : le bouton pour soumettre le formulaire. -->
+ <p class="text-center py-3">
+  <button type="submit" class="btn" [disabled]="!registerForm.valid">
+   Inscription
+  </button>
+ </p>
+</form>
